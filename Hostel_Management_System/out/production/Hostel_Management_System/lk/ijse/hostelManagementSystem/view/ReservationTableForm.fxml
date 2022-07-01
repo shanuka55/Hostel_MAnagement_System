@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.controller.ReservationTableFormController">
+   <children>
+      <ImageView fitHeight="589.0" fitWidth="1014.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@assets/blue_abstract_background_310971.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#597997" height="42.0" stroke="BLACK" strokeType="INSIDE" width="1014.0" />
+      <FontAwesomeIconView fx:id="homeId" fill="#d06060" glyphName="HOME" layoutX="24.0" layoutY="568.0" onMouseClicked="#backToHomeOnAction" size="50" />
+      <JFXButton fx:id="backbtnId" layoutX="94.0" layoutY="529.0" onAction="#backBtnOnAction" prefHeight="42.0" prefWidth="136.0" style="-fx-background-color: #d06060;" text="Back">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="REPLY" size="20" wrappingWidth="39.0" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="367.0" layoutY="13.0" text="Time :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="549.0" layoutY="10.0" text="Date :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="timeLbl" layoutX="427.0" layoutY="15.0" prefHeight="21.0" prefWidth="114.0" text="Label" />
+      <Label fx:id="dateLbl" layoutX="606.0" layoutY="13.0" prefHeight="21.0" prefWidth="395.0" text="Label" />
+      <TableView fx:id="resTable" layoutX="24.0" layoutY="59.0" prefHeight="441.0" prefWidth="971.0">
+         <columns>
+            <TableColumn fx:id="resId" prefWidth="196.0" text="Reservation ID" />
+            <TableColumn fx:id="resDate" prefWidth="189.0" text="Date" />
+            <TableColumn fx:id="studentId" prefWidth="170.0" text="Student Id" />
+            <TableColumn fx:id="roomId" prefWidth="203.0" text="Room Id" />
+            <TableColumn fx:id="status" prefWidth="212.0" text="Status" />
+         </columns>
+      </TableView>
+      <Label layoutX="46.0" layoutY="5.0" text="All Reservation">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="deleteBtnId" layoutX="805.0" layoutY="517.0" onAction="#DeleteBtnOnAction" prefHeight="44.0" prefWidth="190.0" style="-fx-background-color: #030d39;" text=" Reservation" textFill="#f0f3ff">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#eb0000" glyphName="TRASH" size="25" wrappingWidth="34.64285659790039" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.controller.ReservationFormController">
+   <children>
+      <ImageView fitHeight="589.0" fitWidth="1014.0" layoutX="-3.0" layoutY="24.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@assets/blue_abstract_background_310971.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="395.0" layoutX="519.0" layoutY="61.0" opacity="0.44" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="471.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="395.0" layoutX="17.0" layoutY="61.0" opacity="0.44" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="448.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#597997" height="42.0" stroke="BLACK" strokeType="INSIDE" width="1011.0" />
+      <Label layoutX="24.0" layoutY="5.0" text="New Recivation" textFill="#001265">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="95.0" text="Student Id         :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="147.0" text="Student Name  :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="203.0" text="Address             :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="268.0" text="Contact             :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="331.0" text="DOB                   :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="393.0" text="Gender              :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fx:id="homeId" fill="#d06060" glyphName="HOME" layoutX="942.0" layoutY="579.0" onMouseClicked="#hometoHomeOnAction" size="50" />
+      <JFXTextField fx:id="txtStudentId" layoutX="194.0" layoutY="93.0" prefHeight="31.0" prefWidth="254.0" />
+      <JFXTextField fx:id="txtStudentName" layoutX="196.0" layoutY="146.0" prefHeight="31.0" prefWidth="254.0" />
+      <JFXTextField fx:id="txtStudentAddress" layoutX="196.0" layoutY="200.0" prefHeight="31.0" prefWidth="254.0" />
+      <JFXTextField fx:id="txtStudentContact" layoutX="198.0" layoutY="264.0" prefHeight="31.0" prefWidth="254.0" />
+      <JFXButton fx:id="backbtnId" layoutX="22.0" layoutY="531.0" onAction="#backToDashboardOnAction" prefHeight="42.0" prefWidth="136.0" style="-fx-background-color: #d06060;" text="Back">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="REPLY" size="20" wrappingWidth="39.0" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="confirmReservationBtnId" layoutX="815.0" layoutY="396.0" onAction="#confirmResrvationOnAction" prefHeight="44.0" prefWidth="158.0" style="-fx-background-color: #597997;" text="Comfirm" textFill="#0c165e">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#11005b" glyphName="CHECK" size="25" wrappingWidth="36.0" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="cancelReservationBtnId" layoutX="643.0" layoutY="396.0" onAction="#cancelReservationOnAction" prefHeight="44.0" prefWidth="158.0" style="-fx-background-color: #597997;" text="Cancel" textFill="#c30505">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#cd1a1a" glyphName="CLOSE" size="25" wrappingWidth="39.64285659790039" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="361.0" layoutY="7.0" text="Time :">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="543.0" layoutY="4.0" text="Date :">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="424.0" layoutY="5.0" prefHeight="21.0" prefWidth="114.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Label fx:id="lblDate" layoutX="603.0" layoutY="4.0" prefHeight="21.0" prefWidth="395.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <RadioButton fx:id="RdoStudentMale" layoutX="191.0" layoutY="396.0" mnemonicParsing="false" onAction="#StudentGenderOnAction" text="Male">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="RdoStudentFemale" layoutX="290.0" layoutY="396.0" mnemonicParsing="false" onAction="#StudentGenderOnAction" text="Female">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </RadioButton>
+      <JFXDatePicker fx:id="StudentDOB" layoutX="198.0" layoutY="335.0" prefHeight="31.0" prefWidth="254.0" />
+      <Separator layoutX="491.0" layoutY="61.0" orientation="VERTICAL" prefHeight="420.0" prefWidth="3.0" />
+      <Label layoutX="530.0" layoutY="220.0" text="Room Id               :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="528.0" layoutY="276.0" text="Roome Type         :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="528.0" layoutY="341.0" text="Key Monney         :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtRoomId" layoutX="700.0" layoutY="219.0" prefHeight="31.0" prefWidth="254.0" />
+      <JFXTextField fx:id="TxtRoomType" layoutX="700.0" layoutY="273.0" prefHeight="31.0" prefWidth="254.0" />
+      <JFXTextField fx:id="txtRoomKeyMonney" layoutX="702.0" layoutY="337.0" prefHeight="31.0" prefWidth="254.0" />
+      <Label layoutX="531.0" layoutY="166.0" text="Select Room        :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbSelectRoom" layoutX="699.0" layoutY="168.0" prefHeight="31.0" prefWidth="254.0" />
+      <JFXButton fx:id="checkAvailabilityId" layoutX="717.0" layoutY="72.0" onAction="#checkAvailabilityOnAction" prefHeight="44.0" prefWidth="254.0" style="-fx-background-color: #030b3c;" text="Check Avelablility" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#e4e7f8" glyphName="CHECK" size="25" wrappingWidth="46.0" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

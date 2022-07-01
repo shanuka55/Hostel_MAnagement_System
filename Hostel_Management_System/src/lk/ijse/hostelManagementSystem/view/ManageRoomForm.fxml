@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.controller.ManageRoomFormController">
+   <children>
+      <ImageView fitHeight="589.0" fitWidth="1024.0" layoutY="3.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@assets/blue_abstract_background_310971.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#597997" height="42.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="1014.0" />
+      <Label layoutX="37.0" layoutY="15.0" text="Manage Rooms" textFill="#ffc3c3">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="84.0" layoutY="200.0" text="Select Room     :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="84.0" layoutY="258.0" text="Room    Id         :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="84.0" layoutY="310.0" text="Room Type       :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="83.0" layoutY="366.0" text="KeyMoney         :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fx:id="homeId" fill="#d06060" glyphName="HOME" layoutX="963.0" layoutY="569.0" onMouseClicked="#backToHomeOnAction" size="50" />
+      <JFXTextField fx:id="txtRoomId" layoutX="251.0" layoutY="259.0" prefHeight="31.0" prefWidth="254.0" />
+      <JFXTextField fx:id="txtRoomKeyMoney" layoutX="253.0" layoutY="366.0" prefHeight="31.0" prefWidth="254.0" />
+      <JFXComboBox fx:id="cmbRoomId" layoutX="252.0" layoutY="203.0" prefHeight="31.0" prefWidth="254.0" />
+      <JFXButton fx:id="backbtnId" layoutX="74.0" layoutY="530.0" onAction="#backToDashboardOnAction" prefHeight="42.0" prefWidth="136.0" style="-fx-background-color: #d06060;" text="Back">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="REPLY" size="20" wrappingWidth="39.0" />
+         </graphic>
+      </JFXButton>
+      <FontAwesomeIconView glyphName="HOTEL" layoutX="245.0" layoutY="42.0" size="25" />
+      <JFXButton fx:id="updateBtnId" layoutX="687.0" layoutY="301.0" onAction="#UpdateRoomOnAction" prefHeight="63.0" prefWidth="254.0" style="-fx-background-color: #597997;" text="Update Room" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="REFRESH" size="25" wrappingWidth="52.428571701049805" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="deleteBtnId" layoutX="688.0" layoutY="394.0" onAction="#DeleteRoomBtnOnAction" prefHeight="63.0" prefWidth="254.0" style="-fx-background-color: #597997;" text="Delete Room" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#eb0000" glyphName="TRASH" size="25" wrappingWidth="57.64285659790039" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="377.0" layoutY="17.0" text="Time :">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="559.0" layoutY="17.0" text="Date :">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="437.0" layoutY="19.0" prefHeight="21.0" prefWidth="114.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Label fx:id="lblDate" layoutX="616.0" layoutY="19.0" prefHeight="21.0" prefWidth="395.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <JFXButton fx:id="addBtnId1" layoutX="688.0" layoutY="212.0" onAction="#addRoomBtnOnAction" prefHeight="63.0" prefWidth="254.0" style="-fx-background-color: #597997;" text="Add Room" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="PLUS" size="25" wrappingWidth="76.64285659790039" />
+         </graphic>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbRoomType" layoutX="253.0" layoutY="318.0" prefHeight="31.0" prefWidth="254.0" />
+   </children>
+</AnchorPane>
